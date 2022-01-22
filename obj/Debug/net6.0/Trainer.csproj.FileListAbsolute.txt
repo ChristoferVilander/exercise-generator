@@ -1,0 +1,15 @@
+/Users/christofervilander/Trainer/bin/Debug/net6.0/Trainer
+/Users/christofervilander/Trainer/bin/Debug/net6.0/Trainer.deps.json
+/Users/christofervilander/Trainer/bin/Debug/net6.0/Trainer.runtimeconfig.json
+/Users/christofervilander/Trainer/bin/Debug/net6.0/Trainer.dll
+/Users/christofervilander/Trainer/bin/Debug/net6.0/ref/Trainer.dll
+/Users/christofervilander/Trainer/bin/Debug/net6.0/Trainer.pdb
+/Users/christofervilander/Trainer/obj/Debug/net6.0/Trainer.csproj.AssemblyReference.cache
+/Users/christofervilander/Trainer/obj/Debug/net6.0/Trainer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/christofervilander/Trainer/obj/Debug/net6.0/Trainer.AssemblyInfoInputs.cache
+/Users/christofervilander/Trainer/obj/Debug/net6.0/Trainer.AssemblyInfo.cs
+/Users/christofervilander/Trainer/obj/Debug/net6.0/Trainer.csproj.CoreCompileInputs.cache
+/Users/christofervilander/Trainer/obj/Debug/net6.0/Trainer.dll
+/Users/christofervilander/Trainer/obj/Debug/net6.0/ref/Trainer.dll
+/Users/christofervilander/Trainer/obj/Debug/net6.0/Trainer.pdb
+/Users/christofervilander/Trainer/obj/Debug/net6.0/Trainer.genruntimeconfig.cache
