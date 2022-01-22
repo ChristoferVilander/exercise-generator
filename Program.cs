@@ -1,4 +1,5 @@
-﻿namespace Trainer
+﻿
+namespace Trainer
 {
     class Program
     {
