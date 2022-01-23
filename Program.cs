@@ -28,11 +28,7 @@ namespace Trainer
         static void WorkOut(string choice)
         {
 
-
-            if (choice == "A")
-            {
-
-                string[] easyWorkOuts = {
+            string[] easyWorkOuts = {
                         "Snatch x 6 (60%)",
                         "Clean and Jerk x 6 (60%)",
                         "Wallbals x 10 (9kg / 6kg)",
@@ -48,19 +44,7 @@ namespace Trainer
                         "Push Ups x 20",
                     };
 
-                for (int i = 0; i < 5; i++)
-
-                {   // Generates a random number
-                    Random random = new Random();
-                    int easyIndex = random.Next(0, easyWorkOuts.Length);
-                    Console.WriteLine(easyWorkOuts[easyIndex]);
-                }
-
-            }
-
-            else if (choice == "B")
-            {
-                string[] hardWorkOuts = {
+            string[] hardWorkOuts = {
                         "Snatch x 6 (70%)",
                         "Clean and Jerk x 6 (70%)",
                         "Wallbals x 10 (12kg / 9kg)",
@@ -75,6 +59,22 @@ namespace Trainer
                         "HSPU x 12",
                         "Push Ups x 25",
                 };
+
+            if (choice == "A")
+            {
+
+                for (int i = 0; i < 5; i++)
+
+                {   // Generates a random number
+                    Random random = new Random();
+                    int easyIndex = random.Next(0, easyWorkOuts.Length);
+                    Console.WriteLine(easyWorkOuts[easyIndex]);
+                }
+
+            }
+
+            else if (choice == "B")
+            {
 
                 for (int i = 0; i < 5; i++)
 
