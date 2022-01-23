@@ -27,10 +27,9 @@ namespace Trainer
         // Both loops print out 5 random workouts from the array.             
         static void WorkOut(string choice)
         {
-            var easy = "A";
-            var hard = "B";
 
-            if (choice == easy)
+
+            if (choice == "A")
             {
 
                 string[] easyWorkOuts = {
@@ -59,7 +58,7 @@ namespace Trainer
 
             }
 
-            else if (choice == hard)
+            else if (choice == "B")
             {
                 string[] hardWorkOuts = {
                         "Snatch x 6 (70%)",
