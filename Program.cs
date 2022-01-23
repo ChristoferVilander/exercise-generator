@@ -20,7 +20,7 @@ namespace Trainer
             // Checking that the variable isn't null, before dereferencing it.
             if (character is not null)
             {
-                WorkOut(character.ToUpper());
+                WorkOut(character.ToUpper()); //Converts all characters to uppercase
             }
         }
 
