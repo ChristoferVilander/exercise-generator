@@ -11,12 +11,17 @@ namespace Trainer
             Console.Write("Choose Workout A or B ");
 
             string? character = Console.ReadLine();
+
             if (character == null)
             {
                 Console.Write("Choose Workout A or B ");
             }
 
-            WorkOut(character);
+            // Checking that the variable isn't null, before dereferencing it.
+            if (character is not null)
+            {
+                WorkOut(character.ToUpper());
+            }
         }
 
         // This method loops through eather the easy or the more difficult array of workouts.
