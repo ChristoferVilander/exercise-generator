@@ -12,16 +12,15 @@ namespace Trainer
 
             string? character = Console.ReadLine();
 
-            if (character == null)
+            // Validates input with a list of valid characters
+            List<String> validChars = new List<string> { "A", "B", "a", "b" };
+            if (!validChars.Contains(character))
             {
-                Console.Write("Choose Workout A or B ");
+                Main(null);
             }
 
-            // Checking that the variable isn't null, before dereferencing it.
-            if (character is not null)
-            {
-                WorkOut(character.ToUpper()); //Converts all characters to uppercase
-            }
+            WorkOut(character.ToUpper());
+
         }
 
         // This method loops through eather the easy or the more difficult array of workouts.
@@ -52,8 +51,6 @@ namespace Trainer
 
                 for (int i = 0; i < 5; i++)
 
-
-
                 {   // Generates a random number
                     Random random = new Random();
                     int easyIndex = random.Next(0, easyWorkOuts.Length);
@@ -61,6 +58,7 @@ namespace Trainer
                 }
 
             }
+
             else if (choice == hard)
             {
                 string[] hardWorkOuts = {
@@ -78,19 +76,14 @@ namespace Trainer
                         "HSPU x 12",
                         "Push Ups x 25",
                 };
+
                 for (int i = 0; i < 5; i++)
+
                 {   // Generates a random number
                     Random random = new Random();
                     int easyIndex = random.Next(0, hardWorkOuts.Length);
                     Console.WriteLine(hardWorkOuts[easyIndex]);
                 }
-            }
-
-            else
-            {
-                // Returns to the startof the application
-                Main(null);
-
             }
 
         }
