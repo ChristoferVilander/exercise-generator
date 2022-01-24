@@ -28,7 +28,7 @@ namespace Trainer
         static void WorkOut(string choice)
         {
 
-            string[] easyWorkOuts = {
+            var easyWorkOuts = new List<string> {
                         "Snatch x 6 (60%)",
                         "Clean and Jerk x 6 (60%)",
                         "Wallbals x 10 (9kg / 6kg)",
@@ -44,7 +44,7 @@ namespace Trainer
                         "Push Ups x 20",
                     };
 
-            string[] hardWorkOuts = {
+            var hardWorkOuts = new List<string>  {
                         "Snatch x 6 (70%)",
                         "Clean and Jerk x 6 (70%)",
                         "Wallbals x 10 (12kg / 9kg)",
@@ -67,7 +67,7 @@ namespace Trainer
 
                 {   // Generates a random number
                     Random random = new Random();
-                    int easyIndex = random.Next(0, easyWorkOuts.Length);
+                    int easyIndex = random.Next(easyWorkOuts.Count);
                     Console.WriteLine(easyWorkOuts[easyIndex]);
                 }
 
@@ -80,8 +80,8 @@ namespace Trainer
 
                 {   // Generates a random number
                     Random random = new Random();
-                    int easyIndex = random.Next(0, hardWorkOuts.Length);
-                    Console.WriteLine(hardWorkOuts[easyIndex]);
+                    int hardIndex = random.Next(hardWorkOuts.Count);
+                    Console.WriteLine(hardWorkOuts[hardIndex]);
                 }
             }
 
