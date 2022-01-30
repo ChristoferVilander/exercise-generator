@@ -20,8 +20,8 @@
                 Main();
             }
 
-            // Calls the WorkOut Method within the ListOfWorkouts Class
-            ListOfWorkouts.WorkOut(character.ToUpper());
+            // Calls the WorkOut Method within the Logic Class
+            Logic.WorkOut(character.ToUpper());
 
         }
 

@@ -2,13 +2,7 @@ namespace Trainer
 {
     public class ListOfWorkouts
     {
-
-        // This method loops through eather the easy or the more difficult array of workouts.
-        // Both loops print out 5 random workouts from the array.             
-        public static void WorkOut(string choice)
-        {
-
-            var easyWorkOuts = new List<string> {
+        public List<string> easyWorkOuts = new List<string> {
                         "Snatch x 6 (60%)",
                         "Clean and Jerk x 6 (60%)",
                         "Wallbals x 10 (9kg / 6kg)",
@@ -24,7 +18,7 @@ namespace Trainer
                         "Push Ups x 20",
                     };
 
-            var hardWorkOuts = new List<string>  {
+        public List<string> hardWorkOuts = new List<string>  {
                         "Snatch x 6 (70%)",
                         "Clean and Jerk x 6 (70%)",
                         "Wallbals x 10 (12kg / 9kg)",
@@ -39,33 +33,6 @@ namespace Trainer
                         "HSPU x 12",
                         "Push Ups x 25",
                 };
-
-            if (choice == "A")
-            {
-
-                for (int i = 0; i < 5; i++)
-
-                {   // Generates a random number
-                    Random random = new Random();
-                    int easyIndex = random.Next(easyWorkOuts.Count);
-                    Console.WriteLine(easyWorkOuts[easyIndex]);
-                }
-
-            }
-
-            else if (choice == "B")
-            {
-
-                for (int i = 0; i < 5; i++)
-
-                {   // Generates a random number
-                    Random random = new Random();
-                    int hardIndex = random.Next(hardWorkOuts.Count);
-                    Console.WriteLine(hardWorkOuts[hardIndex]);
-                }
-            }
-
-        }
 
     }
 }
