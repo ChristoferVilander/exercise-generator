@@ -8,7 +8,7 @@ namespace Trainer
         public static void WorkOut(string choice)
         {
 
-            ListOfWorkouts A = new ListOfWorkouts();
+            ListOfWorkouts AorB = new ListOfWorkouts();
 
             if (choice == "A")
             {
@@ -17,8 +17,8 @@ namespace Trainer
 
                 {   // Generates a random number
                     Random random = new Random();
-                    int easyIndex = random.Next(A.easyWorkOuts.Count);
-                    Console.WriteLine(A.easyWorkOuts[easyIndex]);
+                    int easyIndex = random.Next(AorB.easyWorkOuts.Count);
+                    Console.WriteLine(AorB.easyWorkOuts[easyIndex]);
                 }
 
             }
@@ -30,8 +30,8 @@ namespace Trainer
 
                 {   // Generates a random number
                     Random random = new Random();
-                    int hardIndex = random.Next(A.hardWorkOuts.Count);
-                    Console.WriteLine(A.hardWorkOuts[hardIndex]);
+                    int hardIndex = random.Next(AorB.hardWorkOuts.Count);
+                    Console.WriteLine(AorB.hardWorkOuts[hardIndex]);
                 }
             }
 
