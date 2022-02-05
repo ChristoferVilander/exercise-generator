@@ -5,7 +5,7 @@ namespace Trainer
 
         // This method loops through eather the easy or the more difficult array of workouts.
         // Both loops print out 5 random workouts from the array.
-        public static void WorkOut(string choice)
+        public void WorkOut(string choice)
         {
 
             ListOfWorkouts AorB = new ListOfWorkouts();
