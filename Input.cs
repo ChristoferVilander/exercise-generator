@@ -4,24 +4,35 @@ namespace Trainer
     {
         public void Start()
         {
-
-            Input input = new Input();
             Logic logic = new Logic();
 
-            Console.Write("Choose Workout A or B ");
-            string? character = Console.ReadLine();
-
-            // Validates input with a list of valid characters
-            List<String> validChars = new List<string> { "A", "B", "a", "b" };
-
-            if (!validChars.Contains(character))
+            while (true)
             {
-                input.Start();
+                Console.Write("Choose Workout A or B ");
+                string? character = Console.ReadLine();
+
+                if (character is null)
+                {
+                    Console.WriteLine("No input available. Exiting.");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(character))
+                {
+                    Console.WriteLine("Invalid input. Please enter A or B.");
+                    continue;
+                }
+
+                string normalizedChoice = character.Trim().ToUpperInvariant();
+
+                if (normalizedChoice == "A" || normalizedChoice == "B")
+                {
+                    logic.WorkOut(normalizedChoice);
+                    return;
+                }
+
+                Console.WriteLine("Invalid input. Please enter A or B.");
             }
-
-            // Calls the WorkOut Method within the Logic Class
-            logic.WorkOut(character.ToUpper());
-
         }
     }
 }

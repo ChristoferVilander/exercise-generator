@@ -2,40 +2,26 @@ namespace Trainer
 {
     public class Logic
     {
-
-        // This method loops through eather the easy or the more difficult array of workouts.
+        // This method loops through either the easy or the more difficult array of workouts.
         // Both loops print out 5 random workouts from the array.
         public void WorkOut(string choice)
         {
-
-            ListOfWorkouts AorB = new ListOfWorkouts();
-
-            if (choice == "A")
+            if (choice != "A" && choice != "B")
             {
-
-                for (int i = 0; i < 5; i++)
-
-                {   // Generates a random number
-                    Random random = new Random();
-                    int easyIndex = random.Next(AorB.easyWorkOuts.Count);
-                    Console.WriteLine(AorB.easyWorkOuts[easyIndex]);
-                }
-
+                throw new ArgumentException("Choice must be either 'A' or 'B'.", nameof(choice));
             }
 
-            else if (choice == "B")
+            ListOfWorkouts workouts = new ListOfWorkouts();
+
+            IReadOnlyList<string> selectedWorkoutList = choice == "A"
+                ? workouts.EasyWorkOuts
+                : workouts.HardWorkOuts;
+
+            for (int i = 0; i < 5; i++)
             {
-
-                for (int i = 0; i < 5; i++)
-
-                {   // Generates a random number
-                    Random random = new Random();
-                    int hardIndex = random.Next(AorB.hardWorkOuts.Count);
-                    Console.WriteLine(AorB.hardWorkOuts[hardIndex]);
-                }
+                int index = Random.Shared.Next(selectedWorkoutList.Count);
+                Console.WriteLine(selectedWorkoutList[index]);
             }
-
         }
-
     }
 }
